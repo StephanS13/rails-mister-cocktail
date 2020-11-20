@@ -11,8 +11,19 @@
   
 }
 
+.cards {
+  margin: 0, auto;
+  display: flex;
+  align-items: space-around;
+}
+
 h1 {
   padding: 100px 100px;
-  display: flexbox
-  align-items: center;
+  margin: 0, auto;
+  
+}
+h3 {
+  padding: 10px 100px;
+  // margin: 0, auto;
+  
 }
