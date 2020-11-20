@@ -1,9 +1,15 @@
-<h1>List of cocktails</h1>
+<%# <div style="background-image: url('https://onepagelove.com/bring-out-the-boos#');"> %>
+<div class= "background-image" style="background-image: url('https://res.cloudinary.com/dehuad3aa/image/upload/v1605879510/50-best-cocktails-inside_x4uonb.jpg');">
+  <h1>List of cocktails</h1>
 
-<ul>
-  <% @cocktails.each do |cocktail| %>
-  <li> <%= link_to(cocktail.name, cocktail_path(cocktail)) %> </li>
-  <% end %>
-</ul>
+<div class="container">
 
-<%= link_to "Add a cocktail", new_cocktail_path %>
+  <ul>
+    <% @cocktails.each do |cocktail| %>
+    <li> <%= link_to(cocktail.name, cocktail_path(cocktail)) %> </li>
+    <% end %>
+  </ul>
+
+  <%= link_to "Add a cocktail", new_cocktail_path %>
+  </div>
+</div>
