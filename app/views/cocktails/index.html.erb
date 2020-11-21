@@ -1,7 +1,7 @@
 <%# <div style="background-image: url('https://onepagelove.com/bring-out-the-boos#');"> %>
-<div class= "background-image" style="background-image: url('https://res.cloudinary.com/dehuad3aa/image/upload/v1605879510/50-best-cocktails-inside_x4uonb.jpg');">
+<div class= "banner" style="background-image: url('https://res.cloudinary.com/dehuad3aa/image/upload/v1605879510/50-best-cocktails-inside_x4uonb.jpg');">
   <div>
-    <h1>Mr. Cocktailz</h1>
+    <h1>Mr. Cocktail</h1>
     <h3>Cocktail Recipes</h3>
   </div>
 
@@ -10,7 +10,12 @@
   <ul>
     <div class="cards">
       <% @cocktails.each do |cocktail| %>
-      <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh1gWH-KP0YyiabiysDtEAMzaZPzGlkJ-laA&usqp=CAU"> <%= link_to(cocktail.name, cocktail_path(cocktail)) %> </li>
+      <%= simple_form_for(cocktail) do |f| %>
+        <!-- [...] -->
+        <%= f.input :photo, as: :file %>
+        <!-- [...] -->
+      <% end %>
+      <%# <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh1gWH-KP0YyiabiysDtEAMzaZPzGlkJ-laA&usqp=CAU"> <%= link_to(cocktail.name, cocktail_path(cocktail)) %> </li> %>
       <% end %>
       </div>
   </ul>
